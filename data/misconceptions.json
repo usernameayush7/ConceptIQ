@@ -1,0 +1,76 @@
+{
+  "misconceptions": [
+    {
+      "id": "MISC_CURRENT_CONSUMED",
+      "concept_id": "c2_current",
+      "name": "Current Attenuation (Current is 'used up')",
+      "description": "Student believes electric current gets consumed or depleted by lightbulbs and resistors as it travels from positive to negative terminal.",
+      "trigger_keywords": ["used up", "consumed", "gets smaller after bulb", "reaches first", "first bulb gets more", "depleted"],
+      "remediation": "Current is the rate of flow of electric charge, and charge is strictly conserved. In any single continuous branch, the rate of electrons entering is equal to the rate of electrons leaving. No current is destroyed or used up!"
+    },
+    {
+      "id": "MISC_BATTERY_CONST_CURRENT",
+      "concept_id": "c5_ohms_law",
+      "name": "Battery as Constant Current Source",
+      "description": "Student assumes a battery always outputs the exact same current regardless of the circuit resistance.",
+      "trigger_keywords": ["battery always gives same current", "battery fixed current", "constant amperes"],
+      "remediation": "A battery maintains a constant potential difference (voltage) across its terminals, NOT a constant current. The current drawn from the battery depends on the total equivalent resistance of the circuit (I = V / R_eq)."
+    },
+    {
+      "id": "MISC_VOLTAGE_CURRENT_CONFUSION",
+      "concept_id": "c3_potential",
+      "name": "Voltage vs Current Confusion",
+      "description": "Student uses voltage and current interchangeably, e.g. saying 'voltage travels through the wire' or 'potential difference flows'.",
+      "trigger_keywords": ["voltage flows", "voltage travels", "potential difference flows", "speed of voltage"],
+      "remediation": "Current is what *flows through* a circuit (rate of charge flow), while potential difference (voltage) is what exists *across* two points to push that charge. Voltage is the electrical pressure, not the fluid."
+    },
+    {
+      "id": "MISC_PARALLEL_ADDITION",
+      "concept_id": "c8_parallel_circuits",
+      "name": "Parallel Resistor Addition Fallacy",
+      "description": "Student believes adding more resistors in parallel increases the total circuit resistance (like series addition).",
+      "trigger_keywords": ["more resistors more resistance", "parallel adds up", "R1 plus R2 parallel", "resistance increases in parallel"],
+      "remediation": "In parallel, adding another branch opens an additional pathway for electrons to flow, which INCREASES total conductance and DECREASES equivalent resistance: 1/Rp = 1/R1 + 1/R2. The equivalent resistance is always smaller than the smallest branch resistance!"
+    },
+    {
+      "id": "MISC_PARALLEL_SPLIT_EQUAL",
+      "concept_id": "c8_parallel_circuits",
+      "name": "Equal Current Split Fallacy",
+      "description": "Student assumes current divides equally between parallel branches regardless of differing resistances.",
+      "trigger_keywords": ["splits equally", "50-50", "half and half regardless", "equal current parallel"],
+      "remediation": "Current divides inversely proportional to resistance (I_branch = V / R_branch). The branch with lower resistance draws more current, and the branch with higher resistance draws less current."
+    },
+    {
+      "id": "MISC_RESISTIVITY_GEOMETRY",
+      "concept_id": "c6_resistance_factors",
+      "name": "Resistivity Geometry Confusion",
+      "description": "Student confuses resistance with resistivity, thinking stretching or cutting a wire changes its resistivity.",
+      "trigger_keywords": ["resistivity doubles", "resistivity changes with length", "resistivity depends on area", "new resistivity"],
+      "remediation": "Resistivity (rho) is an intrinsic physical property of the MATERIAL itself and temperature. It does not depend on the wire's length or cross-sectional area. Resistance (R) changes when dimensions change, but resistivity remains constant for a given material."
+    },
+    {
+      "id": "MISC_SWITCH_POSITION",
+      "concept_id": "c4_circuit_diagrams",
+      "name": "Switch Position Fallacy",
+      "description": "Student believes the switch must precede a bulb in circuit order to turn it off, and that placing it after leaves the bulb on.",
+      "trigger_keywords": ["switch after bulb", "bulb glows before switch", "current reaches bulb before switch"],
+      "remediation": "An open switch breaks the continuity of the entire closed conductive loop. Electric field and charge drift establish simultaneously across the entire circuit. If the loop is broken anywhere, no current flows anywhere in that series loop."
+    },
+    {
+      "id": "MISC_SERIES_BRIGHTNESS_RATING",
+      "concept_id": "c10_electric_power",
+      "name": "Power Rating Fallacy in Series",
+      "description": "Student assumes a 100W bulb will be brighter than a 40W bulb when connected in series.",
+      "trigger_keywords": ["100W brighter in series", "higher wattage always brighter", "100W is rated higher"],
+      "remediation": "Power ratings (e.g. 100W vs 40W) are rated at standard 220V parallel voltage. Resistance is R = V^2/P, so the 40W bulb has a higher resistance than the 100W bulb! In series, current I is the same, so actual power dissipated is P = I^2 * R. The 40W bulb with higher resistance actually dissipates more power and glows brighter in series!"
+    },
+    {
+      "id": "MISC_AMMETER_PARALLEL",
+      "concept_id": "c2_current",
+      "name": "Ammeter in Parallel Misconception",
+      "description": "Student thinks an ammeter should be connected in parallel across a device to measure current.",
+      "trigger_keywords": ["ammeter across", "ammeter parallel", "measure current parallel"],
+      "remediation": "An ammeter has very low (near zero) resistance and must be connected in SERIES so that the circuit current flows through it. Connecting it in parallel creates a short circuit and damages the meter."
+    }
+  ]
+}

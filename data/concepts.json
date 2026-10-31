@@ -1,0 +1,107 @@
+{
+  "subject": "Physics",
+  "grade": 10,
+  "chapter": "Electricity",
+  "concepts": [
+    {
+      "id": "c1_charge",
+      "name": "Electric Charge & Quantization",
+      "description": "Fundamental property of matter causing electric force. Protons (+e) and electrons (-e). Charge is quantized (Q = ne) and conserved.",
+      "key_formulas": ["Q = ne"],
+      "si_unit": "Coulomb (C)",
+      "prerequisites": [],
+      "ncert_section": "12.1",
+      "bloom_level": "Understand"
+    },
+    {
+      "id": "c2_current",
+      "name": "Electric Current & Drift",
+      "description": "Rate of flow of electric charges through a conductor per unit time. Conventional current flows from positive to negative terminal; electrons flow opposite. Measured by Ammeter in series.",
+      "key_formulas": ["I = Q / t"],
+      "si_unit": "Ampere (A) = C/s",
+      "prerequisites": ["c1_charge"],
+      "ncert_section": "12.1",
+      "bloom_level": "Apply"
+    },
+    {
+      "id": "c3_potential",
+      "name": "Electric Potential & Potential Difference",
+      "description": "Work done in moving a unit positive charge from one point to another in an electrostatic field. Maintained by a cell/battery. Measured by Voltmeter connected in parallel.",
+      "key_formulas": ["V = W / Q"],
+      "si_unit": "Volt (V) = J/C",
+      "prerequisites": ["c1_charge"],
+      "ncert_section": "12.2",
+      "bloom_level": "Apply"
+    },
+    {
+      "id": "c4_circuit_diagrams",
+      "name": "Circuit Diagrams & Symbols",
+      "description": "Schematic representation of an electric circuit using standardized symbols for cells, switches, resistors, variable resistors (rheostats), ammeters, and voltmeters.",
+      "key_formulas": [],
+      "si_unit": "N/A",
+      "prerequisites": ["c2_current", "c3_potential"],
+      "ncert_section": "12.3",
+      "bloom_level": "Understand"
+    },
+    {
+      "id": "c5_ohms_law",
+      "name": "Ohm's Law & Resistance",
+      "description": "At constant temperature, current flowing through a conductor is directly proportional to potential difference across its ends (V ∝ I, V = IR). Resistance is the opposition to current.",
+      "key_formulas": ["V = I * R", "R = V / I"],
+      "si_unit": "Ohm (Ω) = V/A",
+      "prerequisites": ["c2_current", "c3_potential", "c4_circuit_diagrams"],
+      "ncert_section": "12.4",
+      "bloom_level": "Apply"
+    },
+    {
+      "id": "c6_resistance_factors",
+      "name": "Factors Affecting Resistance & Resistivity",
+      "description": "Resistance is directly proportional to length (L) and inversely proportional to cross-sectional area (A): R = ρ(L/A). Resistivity (ρ) is an intrinsic material property independent of dimensions.",
+      "key_formulas": ["R = rho * (L / A)", "rho = (R * A) / L"],
+      "si_unit": "Resistivity: Ohm-meter (Ω·m)",
+      "prerequisites": ["c5_ohms_law"],
+      "ncert_section": "12.5",
+      "bloom_level": "Analyze"
+    },
+    {
+      "id": "c7_series_circuits",
+      "name": "Resistors in Series",
+      "description": "End-to-end connection of resistors. Current remains constant across all resistors. Total potential difference is the sum of individual drops: V = V1 + V2. Equivalent resistance: Rs = R1 + R2 + ...",
+      "key_formulas": ["R_s = R1 + R2 + ...", "V = V1 + V2 + ...", "I_total = I1 = I2"],
+      "si_unit": "Ohm (Ω)",
+      "prerequisites": ["c5_ohms_law"],
+      "ncert_section": "12.6.1",
+      "bloom_level": "Analyze"
+    },
+    {
+      "id": "c8_parallel_circuits",
+      "name": "Resistors in Parallel",
+      "description": "Resistors connected across two common points. Potential difference is identical across all branches. Total current is the sum of branch currents: I = I1 + I2. Equivalent resistance: 1/Rp = 1/R1 + 1/R2 + ...",
+      "key_formulas": ["1/R_p = 1/R1 + 1/R2 + ...", "I = I1 + I2 + ...", "V_total = V1 = V2"],
+      "si_unit": "Ohm (Ω)",
+      "prerequisites": ["c5_ohms_law"],
+      "ncert_section": "12.6.2",
+      "bloom_level": "Analyze"
+    },
+    {
+      "id": "c9_joules_heating",
+      "name": "Heating Effect of Electric Current (Joule's Law)",
+      "description": "Conversion of electric energy into thermal energy when current flows through a resistance. Heat produced is proportional to I^2, R, and t: H = I^2 * R * t. Applied in electric irons, heaters, and fuses.",
+      "key_formulas": ["H = I^2 * R * t", "H = V * I * t", "H = (V^2 / R) * t"],
+      "si_unit": "Joule (J)",
+      "prerequisites": ["c5_ohms_law", "c7_series_circuits", "c8_parallel_circuits"],
+      "ncert_section": "12.7",
+      "bloom_level": "Apply"
+    },
+    {
+      "id": "c10_electric_power",
+      "name": "Electric Power & Commercial Energy",
+      "description": "Rate at which electric energy is consumed or dissipated: P = VI = I^2*R = V^2/R. Commercial unit of electric energy is kilowatt-hour (1 kWh = 3.6 × 10^6 J or 1 'unit').",
+      "key_formulas": ["P = V * I", "P = I^2 * R", "P = V^2 / R", "E = P * t", "1 kWh = 3.6e6 J"],
+      "si_unit": "Watt (W), Commercial: kWh",
+      "prerequisites": ["c9_joules_heating"],
+      "ncert_section": "12.8",
+      "bloom_level": "Analyze"
+    }
+  ]
+}

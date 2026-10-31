@@ -1,0 +1,302 @@
+{
+  "questions": [
+    {
+      "id": "q_charge_01",
+      "concept_id": "c1_charge",
+      "difficulty": 0.25,
+      "text": "Calculate the number of electrons constituting one coulomb of charge.",
+      "options": {
+        "A": "6.25 × 10^18 electrons",
+        "B": "1.6 × 10^-19 electrons",
+        "C": "6.25 × 10^19 electrons",
+        "D": "1.6 × 10^19 electrons"
+      },
+      "correct_option": "A",
+      "explanation": "Using Q = n * e, n = Q / e = 1 / (1.6 × 10^-19) = 6.25 × 10^18 electrons.",
+      "hints": [
+        "Recall the quantization formula Q = n * e.",
+        "The elementary charge of an electron is e = 1.6 × 10^-19 C."
+      ],
+      "misconception_distractors": {
+        "B": null,
+        "D": null
+      }
+    },
+    {
+      "id": "q_current_01",
+      "concept_id": "c2_current",
+      "difficulty": 0.35,
+      "text": "A current of 0.5 A is drawn by a filament of an electric bulb for 10 minutes. Find the amount of electric charge that flows through the circuit.",
+      "options": {
+        "A": "5 C",
+        "B": "300 C",
+        "C": "120 C",
+        "D": "50 C"
+      },
+      "correct_option": "B",
+      "explanation": "Given I = 0.5 A, time t = 10 minutes = 10 * 60 = 600 s. Q = I * t = 0.5 * 600 = 300 C.",
+      "hints": [
+        "Time must be converted from minutes to SI unit seconds.",
+        "Use formula Q = I * t."
+      ],
+      "misconception_distractors": {
+        "A": null
+      }
+    },
+    {
+      "id": "q_current_02",
+      "concept_id": "c2_current",
+      "difficulty": 0.45,
+      "text": "Two identical bulbs are connected in series with a 6V battery. Bulb 1 is placed closer to the positive terminal, and Bulb 2 is placed closer to the negative terminal. Which bulb is brighter?",
+      "options": {
+        "A": "Bulb 1 is brighter because current enters it first",
+        "B": "Both bulbs glow with equal brightness",
+        "C": "Bulb 2 is brighter because negative electrons enter it first",
+        "D": "Neither bulb glows because current cannot reach the second bulb"
+      },
+      "correct_option": "B",
+      "explanation": "Current is identical at every point in a series circuit. Electric charge is not consumed by the bulbs. Since identical bulbs carry the same current, they glow with equal brightness.",
+      "hints": [
+        "Consider what electric current represents and whether charge is conserved.",
+        "Does current decrease as it passes through a series resistor?"
+      ],
+      "misconception_distractors": {
+        "A": "MISC_CURRENT_CONSUMED",
+        "C": "MISC_CURRENT_CONSUMED"
+      }
+    },
+    {
+      "id": "q_current_03",
+      "concept_id": "c2_current",
+      "difficulty": 0.40,
+      "text": "How should an ammeter be connected in an electric circuit to measure current flowing through a resistor?",
+      "options": {
+        "A": "Always in parallel across the resistor",
+        "B": "Always in series with the resistor",
+        "C": "Either in series or parallel, it gives the same reading",
+        "D": "Across the terminals of the battery only"
+      },
+      "correct_option": "B",
+      "explanation": "An ammeter has very low resistance and must be connected in series so all the circuit current flows through it without altering the total resistance.",
+      "hints": [
+        "Think about what happens to current in series vs parallel branches.",
+        "An ideal ammeter has zero internal resistance."
+      ],
+      "misconception_distractors": {
+        "A": "MISC_AMMETER_PARALLEL"
+      }
+    },
+    {
+      "id": "q_potential_01",
+      "concept_id": "c3_potential",
+      "difficulty": 0.35,
+      "text": "How much work is done in moving a charge of 2 C across two points having a potential difference 12 V?",
+      "options": {
+        "A": "6 J",
+        "B": "24 J",
+        "C": "14 J",
+        "D": "0.16 J"
+      },
+      "correct_option": "B",
+      "explanation": "V = W / Q => W = V * Q = 12 V * 2 C = 24 J.",
+      "hints": [
+        "Recall definition of potential difference: V = W / Q.",
+        "Rearrange to solve for work W."
+      ],
+      "misconception_distractors": {
+        "A": null
+      }
+    },
+    {
+      "id": "q_circuits_01",
+      "concept_id": "c4_circuit_diagrams",
+      "difficulty": 0.30,
+      "text": "A switch in a series circuit with a battery and light bulb is moved from before the bulb to after the bulb. When the switch is opened, what happens?",
+      "options": {
+        "A": "The bulb stays on because current reaches it before the open switch",
+        "B": "The bulb turns off immediately because the circuit loop is broken",
+        "C": "The bulb flickers because current partially returns to the battery",
+        "D": "The battery explodes due to charge accumulation"
+      },
+      "correct_option": "B",
+      "explanation": "An open switch interrupts the entire conductive path. For electric current to flow, there must be a complete closed loop. Its position in a single series loop does not matter.",
+      "hints": [
+        "Think about the definition of a closed electric circuit.",
+        "Can current flow if any part of a series loop is disconnected?"
+      ],
+      "misconception_distractors": {
+        "A": "MISC_SWITCH_POSITION"
+      }
+    },
+    {
+      "id": "q_ohms_01",
+      "concept_id": "c5_ohms_law",
+      "difficulty": 0.40,
+      "text": "The potential difference across the terminals of an electric heater is 60 V when it draws a current of 4 A from the source. What current will the heater draw if the potential difference is increased to 120 V?",
+      "options": {
+        "A": "4 A (battery supplies constant current)",
+        "B": "8 A",
+        "C": "2 A",
+        "D": "16 A"
+      },
+      "correct_option": "B",
+      "explanation": "Resistance R = V / I = 60 / 4 = 15 Ω. When V' = 120 V, new current I' = V' / R = 120 / 15 = 8 A.",
+      "hints": [
+        "Find the resistance of the heater element first using Ohm's Law.",
+        "Use the calculated resistance to find current at 120 V."
+      ],
+      "misconception_distractors": {
+        "A": "MISC_BATTERY_CONST_CURRENT"
+      }
+    },
+    {
+      "id": "q_resistance_01",
+      "concept_id": "c6_resistance_factors",
+      "difficulty": 0.60,
+      "text": "A cylindrical wire of copper is stretched so that its length increases by a factor of 2 while its volume remains constant. What happens to its resistance and resistivity?",
+      "options": {
+        "A": "Resistance quadruples; resistivity remains unchanged",
+        "B": "Both resistance and resistivity quadruple",
+        "C": "Resistance doubles; resistivity doubles",
+        "D": "Resistance doubles; resistivity remains unchanged"
+      },
+      "correct_option": "A",
+      "explanation": "When length doubles (L' = 2L) and volume is constant (A*L = constant), area halves (A' = A/2). New resistance R' = ρ*(2L)/(A/2) = 4 * ρ(L/A) = 4R. Resistivity ρ is an intrinsic property of copper and does NOT change.",
+      "hints": [
+        "Volume of a wire is Volume = Area * Length.",
+        "What is the difference between resistance (a property of geometry) and resistivity (a material property)?"
+      ],
+      "misconception_distractors": {
+        "B": "MISC_RESISTIVITY_GEOMETRY",
+        "C": "MISC_RESISTIVITY_GEOMETRY"
+      }
+    },
+    {
+      "id": "q_series_01",
+      "concept_id": "c7_series_circuits",
+      "difficulty": 0.50,
+      "text": "Three resistors of 5 Ω, 10 Ω, and 30 Ω are connected in series to a 12 V battery. What is the total equivalent resistance and the current through the 10 Ω resistor?",
+      "options": {
+        "A": "45 Ω and 0.27 A",
+        "B": "45 Ω and 1.2 A",
+        "C": "3 Ω and 4 A",
+        "D": "15 Ω and 0.8 A"
+      },
+      "correct_option": "A",
+      "explanation": "For series resistors, R_s = 5 + 10 + 30 = 45 Ω. Current I = V / R_s = 12 / 45 = 0.267 A ≈ 0.27 A. The same current flows through all components.",
+      "hints": [
+        "Series resistance is R_s = R1 + R2 + R3.",
+        "In a series circuit, current through each component is identical."
+      ],
+      "misconception_distractors": {
+        "C": "MISC_PARALLEL_ADDITION"
+      }
+    },
+    {
+      "id": "q_parallel_01",
+      "concept_id": "c8_parallel_circuits",
+      "difficulty": 0.55,
+      "text": "Two resistors of 10 Ω and 40 Ω are connected in parallel across a 20 V battery. What is the equivalent resistance of the combination?",
+      "options": {
+        "A": "50 Ω",
+        "B": "8 Ω",
+        "C": "25 Ω",
+        "D": "0.125 Ω"
+      },
+      "correct_option": "B",
+      "explanation": "1/R_p = 1/10 + 1/40 = 4/40 + 1/40 = 5/40 = 1/8. Thus R_p = 8 Ω. Notice that equivalent resistance is smaller than the smallest branch resistor (10 Ω).",
+      "hints": [
+        "Use reciprocal formula: 1/R_p = 1/R1 + 1/R2.",
+        "Don't forget to take the reciprocal after summing fractions!"
+      ],
+      "misconception_distractors": {
+        "A": "MISC_PARALLEL_ADDITION"
+      }
+    },
+    {
+      "id": "q_parallel_02",
+      "concept_id": "c8_parallel_circuits",
+      "difficulty": 0.65,
+      "text": "A 12 V battery is connected across two parallel branches: Branch A has resistance 3 Ω, and Branch B has resistance 6 Ω. How does the total current split?",
+      "options": {
+        "A": "Current splits equally: 3 A through each branch",
+        "B": "4 A flows through Branch A (3 Ω) and 2 A flows through Branch B (6 Ω)",
+        "C": "2 A flows through Branch A (3 Ω) and 4 A flows through Branch B (6 Ω)",
+        "D": "All 6 A flows through Branch A because it has lower resistance"
+      },
+      "correct_option": "B",
+      "explanation": "Potential difference is 12 V across both branches. I_A = 12 / 3 = 4 A. I_B = 12 / 6 = 2 A. Lower resistance branch takes higher current.",
+      "hints": [
+        "Calculate current in each branch independently using I = V / R.",
+        "Does current divide 50/50 when resistances are different?"
+      ],
+      "misconception_distractors": {
+        "A": "MISC_PARALLEL_SPLIT_EQUAL"
+      }
+    },
+    {
+      "id": "q_heating_01",
+      "concept_id": "c9_joules_heating",
+      "difficulty": 0.55,
+      "text": "100 J of heat is produced each second in a 4 Ω resistance. Find the potential difference across the resistor.",
+      "options": {
+        "A": "20 V",
+        "B": "25 V",
+        "C": "400 V",
+        "D": "5 V"
+      },
+      "correct_option": "A",
+      "explanation": "Rate of heat production H/t = P = 100 W. P = V^2 / R => 100 = V^2 / 4 => V^2 = 400 => V = 20 V.",
+      "hints": [
+        "Heat produced per second is electric power: H/t = P.",
+        "Recall the formula relating power, voltage, and resistance: P = V^2 / R."
+      ],
+      "misconception_distractors": {
+        "B": null,
+        "D": null
+      }
+    },
+    {
+      "id": "q_power_01",
+      "concept_id": "c10_electric_power",
+      "difficulty": 0.75,
+      "text": "Two electric bulbs rated (40 W, 220 V) and (100 W, 220 V) are connected in series across a 220 V supply. Which bulb will glow brighter?",
+      "options": {
+        "A": "The 100 W bulb because it has a higher wattage rating",
+        "B": "The 40 W bulb because its resistance is higher and series current is the same",
+        "C": "Both bulbs will glow with their rated brightness",
+        "D": "Neither bulb will glow because voltage is insufficient"
+      },
+      "correct_option": "B",
+      "explanation": "Bulb resistance is R = V^2 / P. Thus R_40 = 220^2 / 40 = 1210 Ω, while R_100 = 220^2 / 100 = 484 Ω. In series, both bulbs carry the same current I. Power dissipated is P_actual = I^2 * R. Because R_40 > R_100, the 40 W bulb dissipates more power and glows brighter!",
+      "hints": [
+        "Find the resistance of each bulb from its rating using R = V^2 / P.",
+        "In a series circuit, current is common: compare actual power dissipated P = I^2 * R."
+      ],
+      "misconception_distractors": {
+        "A": "MISC_SERIES_BRIGHTNESS_RATING"
+      }
+    },
+    {
+      "id": "q_power_02",
+      "concept_id": "c10_electric_power",
+      "difficulty": 0.60,
+      "text": "An electric refrigerator rated 400 W operates 8 hours/day. What is the cost of energy to operate it for 30 days at ₹ 3.00 per kWh?",
+      "options": {
+        "A": "₹ 288.00",
+        "B": "₹ 96.00",
+        "C": "₹ 2880.00",
+        "D": "₹ 36.00"
+      },
+      "correct_option": "A",
+      "explanation": "Total energy consumed in 30 days = 400 W * 8 h/day * 30 days = 96,000 Wh = 96 kWh. Cost = 96 kWh * ₹ 3.00/kWh = ₹ 288.00.",
+      "hints": [
+        "Calculate total energy in watt-hours (Power × hours × days).",
+        "Convert watt-hours to kilowatt-hours by dividing by 1000."
+      ],
+      "misconception_distractors": {
+        "B": null
+      }
+    }
+  ]
+}
