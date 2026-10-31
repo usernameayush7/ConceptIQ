@@ -1,68 +1,88 @@
 # ConceptIQ — Class 10 Physics: Electricity Adaptive Learning Platform
-**Member 2 Scope:** Full-Stack Product, Student Experience & Teacher Analytics  
-**Subject:** Class 10 Physics (CBSE / State Boards) • Chapter: Electricity
+
+> **Class 10 Physics (Electricity — NCERT / CBSE)**  
+> An intelligent, full-stack cognitive learning platform that reasons about student mastery, diagnoses cognitive misconceptions, adapts question selection via Bayesian Knowledge Tracing (ZPD), and optimizes retention with spaced repetition.
 
 ---
 
-## ⚡ What Has Been Built (Member 2 Deliverables)
+## 👥 Project Division & Ownership
+
+| Member | Focus Area | Technology |
+| :--- | :--- | :--- |
+| **Member 1** | **AI/ML & Adaptive Learning Engine** | Python, FastAPI, NetworkX DAG, Bayesian Knowledge Tracing (BKT), SuperMemo SM-2, Pytest |
+| **Member 2** | **Full-Stack Product, Student UI & Teacher Analytics** | React (Vite), Tailwind CSS, Recharts, Lucide, Node.js + Express, Analytics Aggregator |
+
+---
+
+## 🏗️ System Architecture
+
+```
+conceptiq/
+├── app/                       # [Member 1] FastAPI Engine
+│   ├── engine/                # BKT, Misconception NLP, Adaptive ZPD, Spaced Repetition
+│   ├── models/                # Pydantic schemas
+│   └── api/                   # REST API routes (:8000)
+├── data/                      # [Member 1] Concept DAG, Misconception Catalog & Question Bank
+├── tests/                     # [Member 1] Automated Test Suite (18 tests)
+│
+├── client/                    # [Member 2] React + Vite Frontend (:5173)
+│   └── src/components/        # Student Portal, Diagnostic Assessment, Practice & Teacher Dashboard
+├── server/                    # [Member 2] Application Server & Adaptive API Bridge (:5000)
+│   ├── services/              # Analytics aggregator, Teacher metrics, API Bridge
+│   └── data/                  # Class 10-A Mock Student Records & Physics Data
+└── API_CONTRACTS.md           # API Contract Specifications between Member 1 & 2
+```
+
+---
+
+## ⚡ Member 2 Deliverables (Full-Stack Product & Analytics)
 
 ### 1. Student Experience (`client/src/components/`)
-- **Landing & Student Entry:** Header status indicators, streak tracker, role toggle.
-- **Diagnostic Assessment (`DiagnosticTest.jsx`):** 
-  - MCQ and Numerical questions with units.
-  - Cognitive reasoning input textarea for Misconception analysis.
-  - Instant post-answer feedback with score changes ($\pm\Delta\%$).
-  - Targeted misconception diagnostic alert with remediation tips.
-- **Adaptive Practice (`AdaptivePractice.jsx`):** 
-  - Real-time recommendation pill showing AI reason for selecting each question.
-  - Dynamic difficulty scaling.
-- **Mastery Dashboard (`MasteryDashboard.jsx`):** 
-  - Concept graph visualization (C1 through C8) with prerequisite tags and progress meters.
-  - Active misconception warning cards.
-  - Spaced repetition review counter.
+- **Diagnostic Assessment (`DiagnosticTest.jsx`):** Multi-format testing (MCQ and Numerical with units), cognitive reasoning textarea, real-time score updates ($\pm\Delta\%$), and instant targeted misconception remediation.
+- **Adaptive Practice (`AdaptivePractice.jsx`):** Dynamic question delivery displaying AI recommendation rationale.
+- **Mastery Dashboard (`MasteryDashboard.jsx`):** Visual syllabus concept graph (C1–C8) with prerequisite badges, active misconception alerts, and spaced repetition review countdowns.
 
 ### 2. Teacher Analytics Dashboard (`TeacherDashboard.jsx`)
-- **KPI Metrics:** Class Average Mastery, Total Enrolled, Class Accuracy, Students Needing Intervention.
-- **Class Mastery Bar Chart (Recharts):** Interactive concept-wise mastery bars color-coded by mastery thresholds.
-- **Misconceptions Frequency Matrix:** Prevalent misconceptions across Class 10-A, percentage of affected students, and clickable student avatars.
-- **Intervention Queue ("Students Needing Support"):** High-priority students, their weakest concept, diagnosed misconceptions, and recommended instructor actions.
-- **Spaced Repetition Retention Schedule:** Class-wide revision planner.
-- **Student Drilldown Drawer (`StudentDetailModal.jsx`):** Deep-dive into individual student mastery and history.
-
-### 3. Application Backend & Adaptive API Bridge (`server/`)
-- Express REST API hosting student/teacher services and analytics aggregation.
-- **Integrated High-Fidelity Mock Adaptive Engine (`services/adaptiveEngine.js`):**
-  - Implements all 6 proposed API contracts for Member 1 (`/api/concepts`, `/api/assessment/start`, `/api/answers/submit`, `/api/learner/progress`, `/api/practice/next`, `/api/reviews/due`).
-  - Supports live switching to Member 1's FastAPI server when ready via `MEMBER1_AI_ENGINE_URL`.
-- Realistic Class 10 Electricity physics syllabus (`conceptGraph.json`), question bank (`questionBank.json`), and demo class records (`mockStudents.json`).
+- **Classroom Mastery Bar Chart (Recharts):** Interactive concept-wise mastery bars color-coded by mastery thresholds.
+- **Prevalent Misconceptions Matrix:** Frequency of misconceptions across Class 10-A with clickable student avatars.
+- **Intervention Queue ("Students Needing Support"):** High-priority students, growth areas, diagnosed misconceptions, and recommended instructor actions.
+- **Student Drilldown Drawer (`StudentDetailModal.jsx`):** Deep-dive into individual student mastery and attempt history.
 
 ---
 
-## 🚀 How to Run the Project
+## 🧠 Member 1 Deliverables (AI/ML & Adaptive Engine)
 
-### Prerequisites
-- Node.js (v18+)
-- npm
+### A. Concept Graph (DAG)
+- 10-concept NCERT syllabus DAG built with NetworkX ensuring acyclicity and prerequisite verification.
 
-### 1. Start Application Backend
-```bash
-cd server
-npm install   # (already completed)
+### B. Learner Model (Bayesian Knowledge Tracing)
+- Continuous mastery tracking $P(L) \in [0.0, 1.0]$ accounting for observation correctness, hint penalties, and attempt numbers with evidence logs.
+
+### C. Misconception Engine
+- Rule-based distractor matching and semantic NLP text analysis returning structured diagnosis, confidence, and remediation.
+
+### D. Adaptive Question Selector (ZPD)
+- Zone of Proximal Development item selection with automatic prerequisite backtracking.
+
+### E. Spaced Repetition (SuperMemo SM-2)
+- Calculates review intervals ($EF$, interval days, next review timestamp).
+
+---
+
+## 🚀 How to Run the Full Platform
+
+### 1. Member 1: AI/ML Engine (Python FastAPI)
+```powershell
+# In a terminal:
+pip install -r requirements.txt
+pytest -v                                     # Run tests
+uvicorn app.main:app --reload --port 8000     # Runs on http://localhost:8000
+```
+*API Docs: `http://localhost:8000/docs`*
+
+### 2. Member 2: Full-Stack Product & UI
+```powershell
+# In a second terminal (starts both backend and frontend):
 npm run dev
 ```
-*Backend runs on `http://localhost:5000`*
-
-### 2. Start Frontend Client
-In a second terminal:
-```bash
-cd client
-npm install   # (already completed)
-npm run dev
-```
-*Frontend runs on `http://localhost:5173`*
-
-### 3. Verify Endpoints
-To run the automated verification test suite:
-```bash
-node server/testEndpoints.js
-```
+*Frontend UI: `http://localhost:5173` (or direct backend server at `http://localhost:5000`)*
