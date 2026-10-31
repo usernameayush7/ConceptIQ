@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import StudentPortal from './components/StudentPortal';
 import TeacherDashboard from './components/TeacherDashboard';
 import { Sparkles, Terminal, Info, ExternalLink } from 'lucide-react';
+import { API_BASE } from './apiConfig';
 
 export default function App() {
   const [activeRole, setActiveRole] = useState('student'); // 'student' | 'teacher'
@@ -10,7 +11,7 @@ export default function App() {
   const [systemHealth, setSystemHealth] = useState(null);
 
   useEffect(() => {
-    fetch('/api/health')
+    fetch(`${API_BASE}/api/health`)
       .then(res => res.json())
       .then(data => setSystemHealth(data))
       .catch(err => console.error('Health check error:', err));

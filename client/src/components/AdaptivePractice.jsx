@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Target, CheckCircle2, XCircle, AlertTriangle, ArrowRight, Lightbulb, Send, RefreshCw } from 'lucide-react';
+import { API_BASE } from '../apiConfig';
 
 export default function AdaptivePractice({ onAnswerSubmitted }) {
   const [loading, setLoading] = useState(true);
@@ -20,7 +21,7 @@ export default function AdaptivePractice({ onAnswerSubmitted }) {
     setExplanationText('');
 
     try {
-      const res = await fetch('/api/practice/next?studentId=std_current');
+      const res = await fetch(`${API_BASE}/api/practice/next?studentId=std_current`);
       if (!res.ok) throw new Error('Failed to fetch adaptive question');
       const data = await res.json();
       setAdaptiveItem(data);
@@ -53,7 +54,7 @@ export default function AdaptivePractice({ onAnswerSubmitted }) {
         explanationText
       };
 
-      const res = await fetch('/api/answers/submit', {
+      const res = await fetch(`${API_BASE}/api/answers/submit`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)

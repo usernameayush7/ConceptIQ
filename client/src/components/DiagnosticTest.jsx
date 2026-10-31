@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { CheckCircle2, XCircle, AlertTriangle, ArrowRight, RotateCcw, Lightbulb, Send, Sparkles } from 'lucide-react';
+import { API_BASE } from '../apiConfig';
 
 export default function DiagnosticTest({ onComplete, onAnswerSubmitted }) {
   const [session, setSession] = useState(null);
@@ -28,7 +29,7 @@ export default function DiagnosticTest({ onComplete, onAnswerSubmitted }) {
     setExplanationText('');
 
     try {
-      const res = await fetch('/api/assessment/start', {
+      const res = await fetch(`${API_BASE}/api/assessment/start`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ studentId: 'std_current', studentName: 'You (Student)' })
@@ -66,7 +67,7 @@ export default function DiagnosticTest({ onComplete, onAnswerSubmitted }) {
         explanationText
       };
 
-      const res = await fetch('/api/answers/submit', {
+      const res = await fetch(`${API_BASE}/api/answers/submit`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)

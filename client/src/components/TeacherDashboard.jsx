@@ -7,6 +7,7 @@ import {
   HelpCircle, ShieldAlert, Award, Search 
 } from 'lucide-react';
 import StudentDetailModal from './StudentDetailModal';
+import { API_BASE } from '../apiConfig';
 
 export default function TeacherDashboard() {
   const [analytics, setAnalytics] = useState(null);
@@ -18,7 +19,7 @@ export default function TeacherDashboard() {
   const fetchAnalytics = async () => {
     setLoading(true);
     try {
-      const res = await fetch('/api/teacher/analytics?section=10-A');
+      const res = await fetch(`${API_BASE}/api/teacher/analytics?section=10-A`);
       if (!res.ok) throw new Error('Failed to load class analytics');
       const data = await res.json();
       setAnalytics(data);

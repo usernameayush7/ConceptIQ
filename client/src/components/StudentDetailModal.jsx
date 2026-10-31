@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { X, Award, AlertTriangle, CheckCircle2, TrendingUp, Calendar, BookOpen } from 'lucide-react';
+import { API_BASE } from '../apiConfig';
 
 export default function StudentDetailModal({ studentId, onClose }) {
   const [data, setData] = useState(null);
@@ -8,7 +9,7 @@ export default function StudentDetailModal({ studentId, onClose }) {
   useEffect(() => {
     if (!studentId) return;
     setLoading(true);
-    fetch(`/api/teacher/students/${studentId}`)
+    fetch(`${API_BASE}/api/teacher/students/${studentId}`)
       .then(res => res.json())
       .then(st => setData(st))
       .catch(err => console.error(err))

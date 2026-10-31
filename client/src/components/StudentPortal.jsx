@@ -3,6 +3,7 @@ import DiagnosticTest from './DiagnosticTest';
 import AdaptivePractice from './AdaptivePractice';
 import MasteryDashboard from './MasteryDashboard';
 import { Target, Compass, Sparkles, BookCheck } from 'lucide-react';
+import { API_BASE } from '../apiConfig';
 
 export default function StudentPortal({ onProgressUpdate }) {
   const [activeTab, setActiveTab] = useState('dashboard'); // 'dashboard' | 'diagnostic' | 'practice'
@@ -11,7 +12,7 @@ export default function StudentPortal({ onProgressUpdate }) {
 
   const fetchProgress = async () => {
     try {
-      const res = await fetch('/api/learner/progress?studentId=std_current');
+      const res = await fetch(`${API_BASE}/api/learner/progress?studentId=std_current`);
       if (res.ok) {
         const data = await res.json();
         setProgress(data);

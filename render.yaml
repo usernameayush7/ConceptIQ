@@ -1,0 +1,27 @@
+services:
+  # 1. Member 1: AI/ML and Adaptive Learning Engine (Python FastAPI)
+  - type: web
+    name: conceptiq-aiml-engine
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    plan: free
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+
+  # 2. Member 2: Full-Stack App Server & Teacher Analytics (Node.js Express)
+  - type: web
+    name: conceptiq-backend
+    runtime: node
+    buildCommand: cd server && npm install
+    startCommand: node server/server.js
+    plan: free
+    envVars:
+      - key: PORT
+        value: 5000
+      - key: MEMBER1_AI_ENGINE_URL
+        fromService:
+          type: web
+          name: conceptiq-aiml-engine
+          property: host
