@@ -38,6 +38,23 @@ if (fs.existsSync(clientDistPath)) {
   app.use(express.static(clientDistPath));
 }
 
+// Root Status & Health
+app.get('/', (req, res) => {
+  res.json({
+    project: 'ConceptIQ',
+    service: 'Backend & Adaptive API',
+    status: 'online',
+    healthCheck: '/api/health',
+    endpoints: {
+      concepts: '/api/concepts',
+      progress: '/api/learner/progress',
+      practice: '/api/practice/next',
+      reviews: '/api/reviews/due',
+      analytics: '/api/teacher/analytics'
+    }
+  });
+});
+
 // System Health and Engine Bridge Status
 app.get('/api/health', (req, res) => {
   res.json({
