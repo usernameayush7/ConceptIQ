@@ -1,0 +1,146 @@
+[
+  {
+    "id": "Q101",
+    "conceptId": "C1",
+    "difficulty": 1,
+    "type": "mcq",
+    "question": "A current of 0.5 A is drawn by a filament of an electric bulb for 10 minutes. What is the total amount of electric charge that flows through the circuit?",
+    "options": [
+      { "id": "A", "text": "5 C", "misconceptionId": null, "feedback": "Did you forget to convert minutes to seconds?" },
+      { "id": "B", "text": "300 C", "misconceptionId": null, "isCorrect": true, "feedback": "Correct! Q = I * t = 0.5 A * (10 * 60 s) = 300 C." },
+      { "id": "C", "text": "30 C", "misconceptionId": null, "feedback": "Incorrect arithmetic. 0.5 * 600 = 300 C." },
+      { "id": "D", "text": "1200 C", "misconceptionId": null, "feedback": "Check your formula: Q = I * t, not t / I." }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Electric current I = Q/t, which implies Q = I * t. Time must be in SI units (seconds): 10 minutes = 600 s. Hence, Q = 0.5 A * 600 s = 300 Coulombs."
+  },
+  {
+    "id": "Q102",
+    "conceptId": "C1",
+    "difficulty": 2,
+    "type": "conceptual_explanation",
+    "question": "Two identical ammeters A1 and A2 are placed in a simple circuit with a resistor: A1 is placed immediately after the battery, and A2 is placed immediately after the resistor. A student argues that A2 will read lower than A1 because the resistor consumes electrical current. Is the student correct? Explain why.",
+    "options": [
+      { "id": "A", "text": "Yes, A2 reads lower because electrical energy and current are consumed.", "misconceptionId": "MISCON_CURRENT_CONSUMED", "feedback": "Identified Misconception: Current Consumption Fallacy. Current is the rate of flow of electrons, which are conserved!" },
+      { "id": "B", "text": "No, both ammeters will read the exact same value.", "misconceptionId": null, "isCorrect": true, "feedback": "Spot on! Charge is conserved in a closed series circuit." },
+      { "id": "C", "text": "A2 will read higher because electrons speed up after the resistance.", "misconceptionId": null, "feedback": "Electrons do not speed up after the resistor; drift velocity and current remain constant." },
+      { "id": "D", "text": "It depends on whether AC or DC is used.", "misconceptionId": null, "feedback": "Charge conservation holds universally in DC and AC steady states." }
+    ],
+    "correctAnswer": "B",
+    "explanationPrompt": "Explain in 1-2 sentences what happens to the electric charges as they pass through the resistor.",
+    "expectedKeywords": ["conserved", "conservation of charge", "energy", "flow rate", "same"],
+    "misconceptionKeywords": ["used up", "eaten", "consumed", "decreases"],
+    "explanation": "Current is the rate of flow of electric charges. By the Law of Conservation of Charge, electrons cannot vanish or accumulate in the resistor. Only potential energy is converted to heat/light, so A1 = A2."
+  },
+  {
+    "id": "Q103",
+    "conceptId": "C2",
+    "difficulty": 1,
+    "type": "numerical",
+    "question": "How much work is done in moving a charge of 4 C across two points having a potential difference of 12 V? (Enter numerical value in Joules)",
+    "correctAnswer": "48",
+    "tolerance": 0.1,
+    "unit": "J",
+    "explanation": "Potential difference V = W / Q => W = V * Q = 12 V * 4 C = 48 Joules."
+  },
+  {
+    "id": "Q104",
+    "conceptId": "C3",
+    "difficulty": 2,
+    "type": "mcq",
+    "question": "According to Ohm's law, if the resistance of a circuit is doubled while the applied voltage across it remains constant, the electric current through the circuit will:",
+    "options": [
+      { "id": "A", "text": "Double", "misconceptionId": null, "feedback": "Current is inversely proportional to resistance (I = V/R)." },
+      { "id": "B", "text": "Remain unchanged because the battery provides a constant current", "misconceptionId": "MISCON_BATTERY_CONSTANT_CURRENT", "feedback": "Identified Misconception: A battery provides constant potential difference, not constant current!" },
+      { "id": "C", "text": "Be halved", "misconceptionId": null, "isCorrect": true, "feedback": "Correct! I = V / R, so doubling R halves I." },
+      { "id": "D", "text": "Become four times smaller", "misconceptionId": null, "feedback": "It is inversely proportional to R, not R²." }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Ohm's law gives I = V / R. When V is constant and R becomes 2R, new current I' = V / (2R) = I / 2."
+  },
+  {
+    "id": "Q105",
+    "conceptId": "C4",
+    "difficulty": 2,
+    "type": "mcq",
+    "question": "A cylindrical wire of radius r and length L has resistance R. If the wire is stretched so that its length becomes 2L while its volume remains constant, what is its new resistance?",
+    "options": [
+      { "id": "A", "text": "2 R", "misconceptionId": null, "feedback": "Remember, when length is doubled by stretching, cross-sectional area also halves because volume is constant!" },
+      { "id": "B", "text": "4 R", "misconceptionId": null, "isCorrect": true, "feedback": "Excellent! Length doubles and area halves: R' = ρ(2L)/(A/2) = 4(ρL/A) = 4R." },
+      { "id": "C", "text": "R / 2", "misconceptionId": null, "feedback": "Resistance increases with length." },
+      { "id": "D", "text": "R (remains same since material resistivity is unchanged)", "misconceptionId": null, "feedback": "Resistivity is constant, but physical dimensions dictate resistance." }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Volume V = A * L is constant. Stretching to length 2L halves area to A/2. New resistance R' = ρ * (2L) / (A/2) = 4 * (ρL / A) = 4R."
+  },
+  {
+    "id": "Q106",
+    "conceptId": "C5",
+    "difficulty": 2,
+    "type": "mcq",
+    "question": "Three identical resistors of 6 Ω each are connected in series to a 12 V battery. What is the potential difference across each individual resistor?",
+    "options": [
+      { "id": "A", "text": "12 V across each", "misconceptionId": null, "feedback": "In series, voltage divides across resistors; it is not full battery voltage." },
+      { "id": "B", "text": "4 V across each", "misconceptionId": null, "isCorrect": true, "feedback": "Correct! Total resistance Rs = 18 Ω, I = 12/18 = 2/3 A. V_each = (2/3) * 6 = 4 V." },
+      { "id": "C", "text": "2 V across each", "misconceptionId": null, "feedback": "Check your calculations: 12 V divided equally across 3 identical resistors is 4 V." },
+      { "id": "D", "text": "6 V across first, 4 V across second, 2 V across third", "misconceptionId": "MISCON_SERIES_CURRENT_DROPS", "feedback": "Identified Misconception: Series Current Attenuation. For identical resistors in series, voltage drop across each is strictly identical!" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "In a series circuit with identical resistors, the total voltage divides equally: V_each = 12 V / 3 = 4 V."
+  },
+  {
+    "id": "Q107",
+    "conceptId": "C6",
+    "difficulty": 2,
+    "type": "mcq",
+    "question": "You have a 10 Ω resistor in a circuit. You add a 1000 Ω resistor in parallel across it. What happens to the overall equivalent resistance of the circuit?",
+    "options": [
+      { "id": "A", "text": "It becomes 1010 Ω because adding more resistors adds up resistance.", "misconceptionId": "MISCON_PARALLEL_RESISTANCE_INCREASES", "feedback": "Identified Misconception: Parallel Resistance Addition. Resistors in parallel reduce the equivalent resistance!" },
+      { "id": "B", "text": "It becomes slightly less than 10 Ω (approximately 9.9 Ω).", "misconceptionId": null, "isCorrect": true, "feedback": "Superb! Equivalent resistance in parallel is always less than the smallest branch resistance." },
+      { "id": "C", "text": "It remains exactly 10 Ω because 1000 Ω is too high to matter.", "misconceptionId": null, "feedback": "The 1000 Ω branch still provides a small additional conductive pathway, slightly lowering Req." },
+      { "id": "D", "text": "It becomes 505 Ω.", "misconceptionId": null, "feedback": "Parallel formula is 1/Rp = 1/R1 + 1/R2, not an average." }
+    ],
+    "correctAnswer": "B",
+    "explanation": "1/Rp = 1/10 + 1/1000 = (100 + 1)/1000 = 101/1000 => Rp = 1000/101 ≈ 9.90 Ω. The equivalent resistance in parallel is always strictly less than the smallest individual resistor."
+  },
+  {
+    "id": "Q108",
+    "conceptId": "C7",
+    "difficulty": 2,
+    "type": "numerical",
+    "question": "An electric iron of resistance 20 Ω takes a current of 5 A. Calculate the heat developed in 30 seconds. (Enter numerical value in Joules)",
+    "correctAnswer": "15000",
+    "tolerance": 50,
+    "unit": "J",
+    "explanation": "Using Joule's Law of heating: H = I^2 * R * t = (5 A)^2 * 20 Ω * 30 s = 25 * 20 * 30 = 15,000 Joules."
+  },
+  {
+    "id": "Q109",
+    "conceptId": "C8",
+    "difficulty": 3,
+    "type": "conceptual_explanation",
+    "question": "Two electric bulbs rated 40 W, 220 V and 100 W, 220 V are connected in parallel to a 220 V household mains supply. Which bulb will glow brighter and why?",
+    "options": [
+      { "id": "A", "text": "The 40 W bulb, because higher resistance generates more power.", "misconceptionId": "MISCON_POWER_HIGHER_R_ALWAYS", "feedback": "Identified Misconception: In parallel connection, voltage is constant. P = V²/R, so lower resistance draws higher current and produces more power!" },
+      { "id": "B", "text": "The 100 W bulb, because it consumes more electrical energy per second at 220 V.", "misconceptionId": null, "isCorrect": true, "feedback": "Spot on! At rated voltage 220 V, the 100 W bulb dissipates 100 J/s vs 40 J/s." },
+      { "id": "C", "text": "Both glow with equal brightness because voltage is identical (220 V).", "misconceptionId": null, "feedback": "Brightness depends on actual power dissipated (P = V*I), and the bulbs have different filaments." },
+      { "id": "D", "text": "Neither bulb will glow because resistance mismatch causes a short circuit.", "misconceptionId": null, "feedback": "Household appliances are designed specifically to run in parallel independently." }
+    ],
+    "correctAnswer": "B",
+    "explanationPrompt": "Write a short sentence comparing the filament resistances of the 40 W and 100 W bulbs.",
+    "expectedKeywords": ["filament", "resistance", "lower", "current", "more power"],
+    "misconceptionKeywords": ["higher resistance brighter"],
+    "explanation": "Since P = V^2 / R, the 100 W bulb has lower filament resistance (R = 220^2 / 100 = 484 Ω vs 1210 Ω for 40 W). In parallel, both receive 220 V, so the 100 W bulb draws higher current and emits greater radiant energy."
+  },
+  {
+    "id": "Q110",
+    "conceptId": "C6",
+    "difficulty": 3,
+    "type": "numerical",
+    "question": "Two resistors of 3 Ω and 6 Ω are connected in parallel. Calculate the equivalent resistance in Ohms. (Enter numerical value)",
+    "correctAnswer": "2",
+    "tolerance": 0.05,
+    "unit": "Ω",
+    "explanation": "1/Rp = 1/3 + 1/6 = (2+1)/6 = 3/6 = 1/2 => Rp = 2 Ω."
+  }
+]

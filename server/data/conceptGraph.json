@@ -1,0 +1,116 @@
+{
+  "subject": "Physics",
+  "grade": 10,
+  "unit": "Electricity",
+  "concepts": [
+    {
+      "id": "C1",
+      "name": "Electric Charge & Current",
+      "shortName": "Electric Current",
+      "description": "Definition of electric current as rate of flow of charge (I = Q/t), direction of conventional current vs electrons, and units (Ampere, Coulomb).",
+      "prerequisites": [],
+      "order": 1,
+      "keyFormulas": ["I = Q / t", "1 A = 1 C / 1 s", "Q = n * e"]
+    },
+    {
+      "id": "C2",
+      "name": "Electric Potential & Potential Difference",
+      "shortName": "Potential Difference",
+      "description": "Work done in moving a unit positive charge between two points (V = W/Q), voltmeters, and electromotive force.",
+      "prerequisites": ["C1"],
+      "order": 2,
+      "keyFormulas": ["V = W / Q", "1 V = 1 J / 1 C"]
+    },
+    {
+      "id": "C3",
+      "name": "Ohm's Law & Electrical Resistance",
+      "shortName": "Ohm's Law",
+      "description": "Direct proportionality between potential difference and current at constant temperature (V = I*R), definition of Ohm (Ω).",
+      "prerequisites": ["C1", "C2"],
+      "order": 3,
+      "keyFormulas": ["V = I * R", "R = V / I"]
+    },
+    {
+      "id": "C4",
+      "name": "Factors Affecting Resistance & Resistivity",
+      "shortName": "Resistivity",
+      "description": "Dependence of resistance on length, cross-sectional area, material resistivity (ρ), and temperature (R = ρ*l / A).",
+      "prerequisites": ["C3"],
+      "order": 4,
+      "keyFormulas": ["R = ρ * l / A", "ρ = R * A / l (Ω·m)"]
+    },
+    {
+      "id": "C5",
+      "name": "Resistors in Series Combination",
+      "shortName": "Series Circuits",
+      "description": "Same current through all resistors, total potential difference splits (V = V1 + V2 + ...), equivalent resistance Rs = R1 + R2 + ...",
+      "prerequisites": ["C3"],
+      "order": 5,
+      "keyFormulas": ["Rs = R1 + R2 + ... + Rn", "I_total = I1 = I2", "V = V1 + V2"]
+    },
+    {
+      "id": "C6",
+      "name": "Resistors in Parallel Combination",
+      "shortName": "Parallel Circuits",
+      "description": "Same potential difference across branches, current splits (I = I1 + I2 + ...), equivalent resistance 1/Rp = 1/R1 + 1/R2 + ...",
+      "prerequisites": ["C3"],
+      "order": 6,
+      "keyFormulas": ["1/Rp = 1/R1 + 1/R2 + ...", "V_total = V1 = V2", "I = I1 + I2"]
+    },
+    {
+      "id": "C7",
+      "name": "Heating Effect of Electric Current",
+      "shortName": "Joule's Heating",
+      "description": "Joule's Law of heating: H = I^2 * R * t, practical applications (electric iron, toaster, fuse wire safety).",
+      "prerequisites": ["C2", "C3", "C5"],
+      "order": 7,
+      "keyFormulas": ["H = I^2 * R * t", "H = V * I * t", "H = (V^2 / R) * t"]
+    },
+    {
+      "id": "C8",
+      "name": "Electric Power & Commercial Energy",
+      "shortName": "Electric Power",
+      "description": "Rate at which electrical energy is consumed (P = V*I = I^2*R = V^2/R), Watt, Kilowatt-hour (1 kWh = 3.6 x 10^6 J).",
+      "prerequisites": ["C3", "C7"],
+      "order": 8,
+      "keyFormulas": ["P = V * I = I^2 * R = V^2 / R", "E = P * t", "1 kWh = 3.6 x 10^6 J"]
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "MISCON_CURRENT_CONSUMED",
+      "name": "Current Consumption Fallacy",
+      "conceptId": "C1",
+      "description": "Believing that electric current is 'used up' or lost as it flows through a circuit component.",
+      "remediation": "Charges are neither created nor destroyed. The number of electrons entering a component per second equals the number leaving it. Only electrical potential energy is transformed."
+    },
+    {
+      "id": "MISCON_SERIES_CURRENT_DROPS",
+      "name": "Series Current Attenuation Fallacy",
+      "conceptId": "C5",
+      "description": "Assuming that current is strongest at the positive terminal and decreases after each consecutive series resistor.",
+      "remediation": "In a single closed loop (series), there are no alternative paths for electrons. By conservation of charge, the current is identical at every single point in the loop."
+    },
+    {
+      "id": "MISCON_PARALLEL_RESISTANCE_INCREASES",
+      "name": "Parallel Resistance Addition Fallacy",
+      "conceptId": "C6",
+      "description": "Thinking that adding more resistors in parallel increases overall circuit resistance because 'more resistors are present'.",
+      "remediation": "Each parallel branch provides an additional pathway for electrons. Adding pathways increases total conductance and lowers overall equivalent resistance (1/Rp = 1/R1 + 1/R2)."
+    },
+    {
+      "id": "MISCON_BATTERY_CONSTANT_CURRENT",
+      "name": "Constant Current Source Fallacy",
+      "conceptId": "C3",
+      "description": "Believing that a chemical cell/battery always pumps out a fixed current regardless of the load connected.",
+      "remediation": "A battery provides a fixed potential difference (voltage). The current drawn is determined strictly by the connected circuit resistance via Ohm's Law: I = V / R."
+    },
+    {
+      "id": "MISCON_POWER_HIGHER_R_ALWAYS",
+      "name": "Power-Resistance Misconception",
+      "conceptId": "C8",
+      "description": "Assuming higher resistance always means greater power consumption without verifying if current or voltage is constant.",
+      "remediation": "When connected in parallel to a constant voltage supply (e.g. household mains), P = V²/R, so smaller resistance draws higher current and consumes MORE power."
+    }
+  ]
+}

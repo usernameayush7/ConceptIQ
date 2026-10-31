@@ -1,0 +1,196 @@
+[
+  {
+    "id": "std_101",
+    "name": "Chhota Bheem",
+    "avatar": "⚡",
+    "classSection": "10-A",
+    "overallMastery": 88,
+    "streakDays": 6,
+    "lastActive": "2026-10-31T09:15:00Z",
+    "conceptMastery": {
+      "C1": 95,
+      "C2": 90,
+      "C3": 92,
+      "C4": 85,
+      "C5": 90,
+      "C6": 88,
+      "C7": 82,
+      "C8": 80
+    },
+    "flaggedMisconceptions": [],
+    "recentAttempts": 24,
+    "accuracy": 91,
+    "status": "mastered"
+  },
+  {
+    "id": "std_102",
+    "name": "Chutki Sharma",
+    "avatar": "🔬",
+    "classSection": "10-A",
+    "overallMastery": 79,
+    "streakDays": 4,
+    "lastActive": "2026-10-31T10:30:00Z",
+    "conceptMastery": {
+      "C1": 88,
+      "C2": 85,
+      "C3": 84,
+      "C4": 72,
+      "C5": 80,
+      "C6": 70,
+      "C7": 75,
+      "C8": 78
+    },
+    "flaggedMisconceptions": ["MISCON_PARALLEL_RESISTANCE_INCREASES"],
+    "recentAttempts": 19,
+    "accuracy": 82,
+    "status": "progressing"
+  },
+  {
+    "id": "std_103",
+    "name": "Raju Patel",
+    "avatar": "🚀",
+    "classSection": "10-A",
+    "overallMastery": 52,
+    "streakDays": 1,
+    "lastActive": "2026-10-30T16:20:00Z",
+    "conceptMastery": {
+      "C1": 70,
+      "C2": 60,
+      "C3": 54,
+      "C4": 42,
+      "C5": 50,
+      "C6": 38,
+      "C7": 48,
+      "C8": 54
+    },
+    "flaggedMisconceptions": [
+      "MISCON_PARALLEL_RESISTANCE_INCREASES",
+      "MISCON_SERIES_CURRENT_DROPS"
+    ],
+    "recentAttempts": 15,
+    "accuracy": 56,
+    "status": "needs_support"
+  },
+  {
+    "id": "std_104",
+    "name": "Kalia Ustad",
+    "avatar": "🦁",
+    "classSection": "10-A",
+    "overallMastery": 44,
+    "streakDays": 0,
+    "lastActive": "2026-10-29T11:00:00Z",
+    "conceptMastery": {
+      "C1": 55,
+      "C2": 45,
+      "C3": 40,
+      "C4": 35,
+      "C5": 38,
+      "C6": 30,
+      "C7": 55,
+      "C8": 42
+    },
+    "flaggedMisconceptions": [
+      "MISCON_CURRENT_CONSUMED",
+      "MISCON_BATTERY_CONSTANT_CURRENT",
+      "MISCON_PARALLEL_RESISTANCE_INCREASES"
+    ],
+    "recentAttempts": 12,
+    "accuracy": 42,
+    "status": "needs_support"
+  },
+  {
+    "id": "std_105",
+    "name": "Jaggu Bandar",
+    "avatar": "💡",
+    "classSection": "10-A",
+    "overallMastery": 71,
+    "streakDays": 3,
+    "lastActive": "2026-10-31T08:45:00Z",
+    "conceptMastery": {
+      "C1": 80,
+      "C2": 78,
+      "C3": 72,
+      "C4": 65,
+      "C5": 74,
+      "C6": 68,
+      "C7": 65,
+      "C8": 66
+    },
+    "flaggedMisconceptions": ["MISCON_POWER_HIGHER_R_ALWAYS"],
+    "recentAttempts": 18,
+    "accuracy": 73,
+    "status": "progressing"
+  },
+  {
+    "id": "std_106",
+    "name": "Indumati Kumari",
+    "avatar": "👑",
+    "classSection": "10-A",
+    "overallMastery": 92,
+    "streakDays": 8,
+    "lastActive": "2026-10-31T11:10:00Z",
+    "conceptMastery": {
+      "C1": 98,
+      "C2": 95,
+      "C3": 92,
+      "C4": 89,
+      "C5": 92,
+      "C6": 90,
+      "C7": 88,
+      "C8": 92
+    },
+    "flaggedMisconceptions": [],
+    "recentAttempts": 30,
+    "accuracy": 94,
+    "status": "mastered"
+  },
+  {
+    "id": "std_107",
+    "name": "Dholu",
+    "avatar": "🥁",
+    "classSection": "10-A",
+    "overallMastery": 58,
+    "streakDays": 2,
+    "lastActive": "2026-10-30T14:10:00Z",
+    "conceptMastery": {
+      "C1": 65,
+      "C2": 58,
+      "C3": 60,
+      "C4": 52,
+      "C5": 54,
+      "C6": 45,
+      "C7": 62,
+      "C8": 64
+    },
+    "flaggedMisconceptions": ["MISCON_PARALLEL_RESISTANCE_INCREASES"],
+    "recentAttempts": 14,
+    "accuracy": 61,
+    "status": "progressing"
+  },
+  {
+    "id": "std_108",
+    "name": "Bholu",
+    "avatar": "🔔",
+    "classSection": "10-A",
+    "overallMastery": 49,
+    "streakDays": 1,
+    "lastActive": "2026-10-29T18:00:00Z",
+    "conceptMastery": {
+      "C1": 58,
+      "C2": 50,
+      "C3": 48,
+      "C4": 40,
+      "C5": 42,
+      "C6": 35,
+      "C7": 56,
+      "C8": 58
+    },
+    "flaggedMisconceptions": [
+      "MISCON_SERIES_CURRENT_DROPS",
+      "MISCON_CURRENT_CONSUMED"
+    ],
+    "recentAttempts": 11,
+    "accuracy": 48,
+    "status": "needs_support"
+  }
+]

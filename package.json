@@ -1,0 +1,13 @@
+{
+  "name": "dholakpur-warriors-workspace",
+  "version": "1.0.0",
+  "description": "Adaptive Learning Platform - Class 10 Physics: Electricity",
+  "scripts": {
+    "dev": "concurrently -n \"server,client\" -c \"blue,green\" \"npm run server\" \"npm run client\"",
+    "server": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.6"
+  }
+}
